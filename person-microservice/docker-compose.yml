@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  persons:
+    build:
+      context: .
+      dockerfile: ../Docker/Dockerfile.persons
+    container_name: person-microservice
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+    working_dir: /app
+    depends_on:
+      - cassandra
+    environment:
+      - RAILS_ENV=development
+      - CASSANDRA_CONTACT_POINTS=cassandra
+    command: >
+      bash -c "
+        if [ ! -f config/application.rb ]; then
+          rails new . --api --skip-active-record --skip-bundle &&
+          bundle install &&
+          echo 'Rails app created';
+        else
+          echo 'Rails app exists';
+        fi &&
+        rails server -b 0.0.0.0
+      "
+
+  cassandra:
+    image: cassandra:4.1
+    container_name: cassandra-db
+    ports:
+      - "9042:9042"
+    volumes:
+      - ./cassandra-data:/var/lib/cassandra 
