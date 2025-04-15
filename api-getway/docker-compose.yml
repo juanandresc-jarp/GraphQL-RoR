@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  api_gateway:
+    build:
+      context: .
+      dockerfile: ../Docker/Dockerfile.gateway
+    container_name: api-gateway
+    ports:
+      - "4000:3000"
+    volumes:
+      - .:/app
+    working_dir: /app
+    environment:
+      - RAILS_ENV=development
+      - PERSONS_API_URL=http://host.docker.internal:3000/persons 
+      - PETS_API_URL=http://host.docker.internal:3001/pets
+    command: >
+      bash -c "
+        if [ ! -f config/application.rb ]; then
+          rails new . --api --skip-active-record --skip-bundle &&
+          bundle install &&
+          echo 'Rails app created';
+        else
+          echo 'Rails app exists';
+        fi &&
+        rails server -b 0.0.0.0
+      "

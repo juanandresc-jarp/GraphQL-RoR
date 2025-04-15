@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+  pets:
+    build:
+      context: .
+      dockerfile: ../Docker/Dockerfile.pets
+    container_name: pet-microservice
+    ports:
+      - "3001:3000"
+    volumes:
+      - .:/app
+    working_dir: /app
+    depends_on:
+      - cassandra-pets-db
+    environment:
+      - RAILS_ENV=development
+      - CASSANDRA_CONTACT_POINTS=cassandra-pets-db
+    command: >
+      bash -c "
+        if [ ! -f config/application.rb ]; then
+          rails new . --api --skip-active-record --skip-bundle &&
+          bundle install &&
+          echo 'Rails app created';
+        else
+          echo 'Rails app exists';
+        fi &&
+        rails server -b 0.0.0.0
+      "
+    networks:
+      - microservice-network
+
+  cassandra-pets-db:
+    image: cassandra:4.1
+    container_name: cassandra-pets-db
+    volumes:
+      - ./cassandra-data:/var/lib/cassandra 
+    networks:
+      - microservice-network
+networks:
+  microservice-network:
+    driver: bridge

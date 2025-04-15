@@ -12,10 +12,10 @@ services:
       - .:/app
     working_dir: /app
     depends_on:
-      - cassandra
+      - cassandra-persons-db
     environment:
       - RAILS_ENV=development
-      - CASSANDRA_CONTACT_POINTS=cassandra
+      - CASSANDRA_CONTACT_POINTS=cassandra-persons-db
     command: >
       bash -c "
         if [ ! -f config/application.rb ]; then
@@ -27,11 +27,16 @@ services:
         fi &&
         rails server -b 0.0.0.0
       "
+    networks:
+      - microservice-network
 
-  cassandra:
+  cassandra-persons-db:
     image: cassandra:4.1
-    container_name: cassandra-db
-    ports:
-      - "9042:9042"
+    container_name: cassandra-persons-db
     volumes:
       - ./cassandra-data:/var/lib/cassandra 
+    networks:
+      - microservice-network
+networks:
+  microservice-network:
+    driver: bridge
