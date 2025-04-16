@@ -52,3 +52,395 @@ Processing by PersonsController#index as */*
 Completed 200 OK in 5ms (Views: 0.1ms | GC: 0.7ms)
 
 
+Started GET "/persons" for 172.20.0.6 at 2025-04-16 18:03:17 +0000
+Started GET "/persons" for 172.20.0.6 at 2025-04-16 18:03:17 +0000
+Processing by PersonsController#index as */*
+Processing by PersonsController#index as */*
+Completed 200 OK in 2441ms (Views: 0.4ms | GC: 106.0ms)
+
+
+Completed 200 OK in 2437ms (Views: 0.3ms | GC: 106.0ms)
+
+
+Started GET "/persons" for 172.20.0.6 at 2025-04-16 18:03:24 +0000
+Processing by PersonsController#index as */*
+Completed 200 OK in 7ms (Views: 0.2ms | GC: 0.0ms)
+
+
+Started GET "/persons" for 172.20.0.6 at 2025-04-16 18:09:27 +0000
+Processing by PersonsController#index as */*
+Completed 200 OK in 322ms (Views: 3.3ms | GC: 0.0ms)
+
+
+Started GET "/persons/:dni" for 172.20.0.6 at 2025-04-16 18:09:35 +0000
+Processing by PersonsController#show as */*
+  Parameters: {"id"=>":dni"}
+Completed 404 Not Found in 5ms (Views: 0.4ms | GC: 0.0ms)
+
+
+Started GET "/persons/12345678" for 172.20.0.6 at 2025-04-16 18:10:28 +0000
+Processing by PersonsController#show as */*
+  Parameters: {"id"=>"12345678"}
+Completed 200 OK in 5ms (Views: 0.1ms | GC: 0.0ms)
+
+
+Started GET "/persons" for 172.20.0.6 at 2025-04-16 18:12:28 +0000
+Processing by PersonsController#index as */*
+Completed 200 OK in 9ms (Views: 0.3ms | GC: 1.1ms)
+
+
+Started GET "/persons/:dni" for 172.20.0.6 at 2025-04-16 18:12:29 +0000
+Processing by PersonsController#show as */*
+  Parameters: {"id"=>":dni"}
+Completed 404 Not Found in 4ms (Views: 0.2ms | GC: 0.0ms)
+
+
+Started GET "/persons" for 172.20.0.6 at 2025-04-16 18:22:22 +0000
+Processing by PersonsController#index as */*
+Completed 200 OK in 206ms (Views: 3.2ms | GC: 0.0ms)
+
+
+Started GET "/persons" for 172.20.0.6 at 2025-04-16 18:22:38 +0000
+Processing by PersonsController#index as */*
+Completed 200 OK in 5ms (Views: 0.2ms | GC: 0.0ms)
+
+
+Started GET "/persons" for 172.20.0.6 at 2025-04-16 18:22:58 +0000
+Processing by PersonsController#index as */*
+Completed 200 OK in 4ms (Views: 0.2ms | GC: 0.0ms)
+
+
+Started GET "/persons" for 172.20.0.6 at 2025-04-16 18:31:30 +0000
+Processing by PersonsController#index as */*
+Completed 200 OK in 249ms (Views: 28.6ms | GC: 0.0ms)
+
+
+Started GET "/persons" for 172.20.0.6 at 2025-04-16 18:31:33 +0000
+Processing by PersonsController#index as */*
+Completed 200 OK in 5ms (Views: 0.2ms | GC: 0.0ms)
+
+
+Started GET "/persons" for 172.20.0.6 at 2025-04-16 18:31:35 +0000
+Processing by PersonsController#index as */*
+Completed 200 OK in 4ms (Views: 0.2ms | GC: 0.0ms)
+
+
+Started GET "/persons" for 172.20.0.6 at 2025-04-16 18:31:40 +0000
+Processing by PersonsController#index as */*
+Completed 200 OK in 4ms (Views: 0.1ms | GC: 0.0ms)
+
+
+Started GET "/persons" for 172.20.0.6 at 2025-04-16 18:31:42 +0000
+Processing by PersonsController#index as */*
+Completed 200 OK in 5ms (Views: 0.2ms | GC: 0.0ms)
+
+
+Started GET "/persons" for 172.20.0.6 at 2025-04-16 18:32:17 +0000
+Processing by PersonsController#index as */*
+Completed 200 OK in 8ms (Views: 0.2ms | GC: 0.0ms)
+
+
+Started GET "/persons" for 172.20.0.6 at 2025-04-16 18:32:54 +0000
+Processing by PersonsController#index as */*
+Completed 200 OK in 3ms (Views: 0.2ms | GC: 0.0ms)
+
+
+Started GET "/persons" for 172.20.0.6 at 2025-04-16 18:33:08 +0000
+Processing by PersonsController#index as */*
+Completed 200 OK in 8ms (Views: 0.1ms | GC: 1.8ms)
+
+
+Started GET "/persons" for 172.20.0.6 at 2025-04-16 18:33:15 +0000
+Processing by PersonsController#index as */*
+Completed 200 OK in 4ms (Views: 0.2ms | GC: 0.0ms)
+
+
+Started GET "/persons" for 172.20.0.6 at 2025-04-16 18:36:00 +0000
+Processing by PersonsController#index as */*
+Completed 200 OK in 3ms (Views: 0.1ms | GC: 0.0ms)
+
+
+Started GET "/persons" for 172.20.0.6 at 2025-04-16 18:36:01 +0000
+Processing by PersonsController#index as */*
+Completed 200 OK in 4ms (Views: 0.2ms | GC: 0.7ms)
+
+
+Started GET "/persons" for 172.20.0.6 at 2025-04-16 18:36:04 +0000
+Processing by PersonsController#index as */*
+Completed 200 OK in 3ms (Views: 0.1ms | GC: 0.0ms)
+
+
+Started GET "/persons" for 172.20.0.6 at 2025-04-16 18:36:07 +0000
+Processing by PersonsController#index as */*
+Completed 200 OK in 4ms (Views: 0.2ms | GC: 0.0ms)
+
+
+Started GET "/persons" for 172.20.0.6 at 2025-04-16 18:36:39 +0000
+Processing by PersonsController#index as */*
+Completed 200 OK in 4ms (Views: 0.2ms | GC: 0.0ms)
+
+
+Started GET "/persons/1234578" for 172.20.0.6 at 2025-04-16 18:37:45 +0000
+Processing by PersonsController#show as */*
+  Parameters: {"id"=>"1234578"}
+Completed 200 OK in 7ms (Views: 0.2ms | GC: 0.3ms)
+
+
+Started GET "/persons/12345678" for 172.20.0.6 at 2025-04-16 18:37:54 +0000
+Processing by PersonsController#show as */*
+  Parameters: {"id"=>"12345678"}
+Completed 200 OK in 3ms (Views: 0.1ms | GC: 0.0ms)
+
+
+Started GET "/persons/1234578" for 172.20.0.6 at 2025-04-16 18:38:02 +0000
+Processing by PersonsController#show as */*
+  Parameters: {"id"=>"1234578"}
+Completed 200 OK in 2ms (Views: 0.1ms | GC: 0.0ms)
+
+
+Started GET "/persons" for 172.20.0.6 at 2025-04-16 18:38:03 +0000
+Processing by PersonsController#index as */*
+Completed 200 OK in 3ms (Views: 0.1ms | GC: 0.2ms)
+
+
+Started GET "/persons/1234578" for 172.20.0.6 at 2025-04-16 18:38:15 +0000
+Processing by PersonsController#show as */*
+  Parameters: {"id"=>"1234578"}
+Completed 200 OK in 3ms (Views: 0.1ms | GC: 0.0ms)
+
+
+Started GET "/persons/1234578" for 172.20.0.6 at 2025-04-16 18:38:15 +0000
+Processing by PersonsController#show as */*
+  Parameters: {"id"=>"1234578"}
+Completed 200 OK in 3ms (Views: 0.1ms | GC: 0.0ms)
+
+
+Started GET "/persons" for 172.20.0.6 at 2025-04-16 18:38:18 +0000
+Processing by PersonsController#index as */*
+Completed 200 OK in 4ms (Views: 0.1ms | GC: 0.0ms)
+
+
+Started GET "/persons/12345678" for 172.20.0.6 at 2025-04-16 18:38:24 +0000
+Processing by PersonsController#show as */*
+  Parameters: {"id"=>"12345678"}
+Completed 200 OK in 3ms (Views: 0.1ms | GC: 0.0ms)
+
+
+Started GET "/persons" for 172.20.0.6 at 2025-04-16 18:38:25 +0000
+Processing by PersonsController#index as */*
+Completed 200 OK in 3ms (Views: 0.1ms | GC: 0.0ms)
+
+
+Started GET "/persons" for 172.20.0.6 at 2025-04-16 18:39:49 +0000
+Processing by PersonsController#index as */*
+Completed 200 OK in 3ms (Views: 0.2ms | GC: 0.0ms)
+
+
+Started GET "/persons" for 172.20.0.6 at 2025-04-16 18:47:57 +0000
+Processing by PersonsController#index as */*
+Completed 200 OK in 3ms (Views: 0.1ms | GC: 0.0ms)
+
+
+Started POST "/persons" for 172.20.0.6 at 2025-04-16 18:52:43 +0000
+Processing by PersonsController#create as JSON
+  Parameters: {"person"=>{"dni"=>"123", "first_name"=>"juan", "last_name"=>"pachon", "email"=>"[FILTERED]", "phone"=>"1232"}}
+Completed 201 Created in 20ms (Views: 0.1ms | GC: 0.0ms)
+
+
+Started GET "/persons/12345678" for 172.20.0.6 at 2025-04-16 18:52:47 +0000
+Processing by PersonsController#show as */*
+  Parameters: {"id"=>"12345678"}
+Completed 200 OK in 3ms (Views: 0.1ms | GC: 0.0ms)
+
+
+Started GET "/persons/1234578" for 172.20.0.6 at 2025-04-16 18:52:48 +0000
+Processing by PersonsController#show as */*
+  Parameters: {"id"=>"1234578"}
+Completed 200 OK in 3ms (Views: 0.1ms | GC: 0.0ms)
+
+
+Started GET "/persons" for 172.20.0.6 at 2025-04-16 18:52:53 +0000
+Processing by PersonsController#index as */*
+Completed 200 OK in 4ms (Views: 0.2ms | GC: 0.0ms)
+
+
+Started GET "/persons/123" for 172.20.0.6 at 2025-04-16 19:01:14 +0000
+Processing by PersonsController#show as */*
+  Parameters: {"id"=>"123"}
+Completed 200 OK in 3ms (Views: 0.1ms | GC: 0.0ms)
+
+
+Started GET "/persons/1234578" for 172.20.0.6 at 2025-04-16 19:01:21 +0000
+Processing by PersonsController#show as */*
+  Parameters: {"id"=>"1234578"}
+Completed 200 OK in 9ms (Views: 0.1ms | GC: 3.7ms)
+
+
+Started GET "/persons/1234578" for 172.20.0.6 at 2025-04-16 19:01:25 +0000
+Processing by PersonsController#show as */*
+  Parameters: {"id"=>"1234578"}
+Completed 200 OK in 4ms (Views: 0.2ms | GC: 0.0ms)
+
+
+Started GET "/persons" for 172.20.0.6 at 2025-04-16 19:01:49 +0000
+Processing by PersonsController#index as */*
+Completed 200 OK in 3ms (Views: 0.1ms | GC: 0.0ms)
+
+
+Started GET "/persons" for 172.20.0.6 at 2025-04-16 19:01:59 +0000
+Processing by PersonsController#index as */*
+Completed 200 OK in 11ms (Views: 0.1ms | GC: 4.0ms)
+
+
+Started GET "/persons/123" for 172.20.0.6 at 2025-04-16 19:02:14 +0000
+Processing by PersonsController#show as */*
+  Parameters: {"id"=>"123"}
+Completed 200 OK in 4ms (Views: 0.1ms | GC: 0.4ms)
+
+
+Started GET "/persons/123" for 172.20.0.6 at 2025-04-16 19:04:52 +0000
+Processing by PersonsController#show as */*
+  Parameters: {"id"=>"123"}
+Completed 200 OK in 6ms (Views: 0.1ms | GC: 0.0ms)
+
+
+Started GET "/persons/123" for 172.20.0.6 at 2025-04-16 19:11:03 +0000
+Processing by PersonsController#show as */*
+  Parameters: {"id"=>"123"}
+Completed 200 OK in 190ms (Views: 1.9ms | GC: 0.0ms)
+
+
+Started GET "/persons/123" for 172.20.0.6 at 2025-04-16 19:13:00 +0000
+Processing by PersonsController#show as */*
+  Parameters: {"id"=>"123"}
+Completed 200 OK in 3ms (Views: 0.1ms | GC: 0.0ms)
+
+
+Started GET "/persons/1234" for 172.20.0.6 at 2025-04-16 19:13:06 +0000
+Processing by PersonsController#show as */*
+  Parameters: {"id"=>"1234"}
+Completed 404 Not Found in 5ms (Views: 0.7ms | GC: 0.0ms)
+
+
+Started GET "/persons/123" for 172.20.0.6 at 2025-04-16 19:13:10 +0000
+Processing by PersonsController#show as */*
+  Parameters: {"id"=>"123"}
+Completed 200 OK in 6ms (Views: 0.2ms | GC: 0.0ms)
+
+
+Started GET "/persons/123" for 172.20.0.6 at 2025-04-16 19:14:57 +0000
+Processing by PersonsController#show as */*
+  Parameters: {"id"=>"123"}
+Completed 200 OK in 10ms (Views: 0.2ms | GC: 0.0ms)
+
+
+Started GET "/persons/1233" for 172.20.0.6 at 2025-04-16 19:15:02 +0000
+Processing by PersonsController#show as */*
+  Parameters: {"id"=>"1233"}
+Completed 404 Not Found in 8ms (Views: 0.1ms | GC: 0.0ms)
+
+
+Started GET "/persons/123" for 172.20.0.6 at 2025-04-16 19:15:52 +0000
+Processing by PersonsController#show as */*
+  Parameters: {"id"=>"123"}
+Completed 200 OK in 4ms (Views: 0.2ms | GC: 0.0ms)
+
+
+Started GET "/persons/1234" for 172.20.0.6 at 2025-04-16 19:15:56 +0000
+Processing by PersonsController#show as */*
+  Parameters: {"id"=>"1234"}
+Completed 404 Not Found in 5ms (Views: 0.2ms | GC: 0.0ms)
+
+
+Started GET "/persons/update" for 172.20.0.6 at 2025-04-16 19:18:26 +0000
+Processing by PersonsController#show as */*
+  Parameters: {"id"=>"update"}
+Completed 404 Not Found in 3ms (Views: 0.1ms | GC: 0.0ms)
+
+
+Started GET "/persons/updatepersonform" for 172.20.0.6 at 2025-04-16 19:18:36 +0000
+Processing by PersonsController#show as */*
+  Parameters: {"id"=>"updatepersonform"}
+Completed 404 Not Found in 3ms (Views: 0.2ms | GC: 0.0ms)
+
+
+Started GET "/persons" for 172.20.0.6 at 2025-04-16 19:18:48 +0000
+Processing by PersonsController#index as */*
+Completed 200 OK in 4ms (Views: 0.1ms | GC: 0.0ms)
+
+
+Started GET "/persons" for 172.20.0.6 at 2025-04-16 19:18:58 +0000
+Processing by PersonsController#index as */*
+Completed 200 OK in 4ms (Views: 0.1ms | GC: 0.0ms)
+
+
+Started GET "/persons/123" for 172.20.0.6 at 2025-04-16 19:20:43 +0000
+Processing by PersonsController#show as */*
+  Parameters: {"id"=>"123"}
+Completed 200 OK in 8ms (Views: 0.1ms | GC: 1.0ms)
+
+
+Started GET "/persons/123" for 172.20.0.6 at 2025-04-16 19:22:01 +0000
+Processing by PersonsController#show as */*
+  Parameters: {"id"=>"123"}
+Completed 200 OK in 3ms (Views: 0.1ms | GC: 0.0ms)
+
+
+Started GET "/persons/123" for 172.20.0.6 at 2025-04-16 19:26:03 +0000
+Processing by PersonsController#show as */*
+  Parameters: {"id"=>"123"}
+Completed 200 OK in 4ms (Views: 0.1ms | GC: 0.0ms)
+
+
+Started PUT "/persons/123" for 172.20.0.6 at 2025-04-16 19:26:05 +0000
+Processing by PersonsController#update as JSON
+  Parameters: {"person"=>{"dni"=>"123", "first_name"=>"juan", "last_name"=>"pachon", "email"=>"[FILTERED]", "phone"=>"1232"}, "id"=>"123"}
+Completed 200 OK in 15ms (Views: 0.1ms | GC: 0.0ms)
+
+
+Started GET "/persons" for 172.20.0.6 at 2025-04-16 19:26:12 +0000
+Processing by PersonsController#index as */*
+Completed 200 OK in 4ms (Views: 0.1ms | GC: 0.0ms)
+
+
+Started DELETE "/persons/123" for 172.20.0.6 at 2025-04-16 19:33:48 +0000
+Processing by PersonsController#destroy as JSON
+  Parameters: {"id"=>"123"}
+Completed 200 OK in 5ms (Views: 0.1ms | GC: 0.0ms)
+
+
+Started GET "/persons" for 172.20.0.6 at 2025-04-16 19:33:53 +0000
+Processing by PersonsController#index as */*
+Completed 200 OK in 3ms (Views: 0.1ms | GC: 0.0ms)
+
+
+Started POST "/persons" for 172.20.0.6 at 2025-04-16 19:38:20 +0000
+Processing by PersonsController#create as JSON
+  Parameters: {"person"=>{"dni"=>"123", "first_name"=>"juan", "last_name"=>"pachon", "email"=>"[FILTERED]", "phone"=>"1232"}}
+Completed 201 Created in 4ms (Views: 0.2ms | GC: 0.1ms)
+
+
+Started GET "/persons/123" for 172.20.0.6 at 2025-04-16 19:38:44 +0000
+Processing by PersonsController#show as */*
+  Parameters: {"id"=>"123"}
+Completed 200 OK in 2ms (Views: 0.1ms | GC: 0.0ms)
+
+
+Started GET "/persons/123" for 172.20.0.6 at 2025-04-16 19:38:48 +0000
+Processing by PersonsController#show as */*
+  Parameters: {"id"=>"123"}
+Completed 200 OK in 3ms (Views: 0.1ms | GC: 0.0ms)
+
+
+Started DELETE "/persons/123" for 172.20.0.6 at 2025-04-16 19:39:55 +0000
+Processing by PersonsController#destroy as JSON
+  Parameters: {"id"=>"123"}
+Completed 200 OK in 3ms (Views: 0.1ms | GC: 0.0ms)
+
+
+Started GET "/persons/123" for 172.20.0.6 at 2025-04-16 19:40:19 +0000
+Processing by PersonsController#show as */*
+  Parameters: {"id"=>"123"}
+Completed 404 Not Found in 2ms (Views: 0.1ms | GC: 0.0ms)
+
+

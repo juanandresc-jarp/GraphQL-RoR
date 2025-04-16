@@ -1,0 +1,139 @@
+version: '3.8'
+
+services:
+  # PERSON MICROSERVICE
+  persons:
+    build:
+      context: ./person-microservice
+      dockerfile: ../Docker/Dockerfile.persons
+    container_name: person-microservice
+    volumes:
+      - ./person-microservice:/app
+    working_dir: /app
+    depends_on:
+      - cassandra-persons-db
+    environment:
+      - RAILS_ENV=development
+      - CASSANDRA_CONTACT_POINTS=cassandra-persons-db
+    command: >
+      bash -c "
+        rm -f tmp/pids/server.pid &&
+        if [ ! -f config/application.rb ]; then
+          rails new . --api --skip-active-record --skip-bundle &&
+          bundle install &&
+          echo 'Rails app created';
+        else
+          echo 'Rails app exists';
+        fi &&
+        rails server -b 0.0.0.0
+      "
+
+    networks:
+      - microservice-network
+
+  cassandra-persons-db:
+    image: cassandra:4.1
+    container_name: cassandra-persons-db
+    volumes:
+      - ./person-microservice/cassandra-data:/var/lib/cassandra
+    networks:
+      - microservice-network
+
+  # PET MICROSERVICE
+  pets:
+    build:
+      context: ./pet-microservice
+      dockerfile: ../Docker/Dockerfile.pets
+    container_name: pet-microservice
+    volumes:
+      - ./pet-microservice:/app
+    working_dir: /app
+    depends_on:
+      - cassandra-pets-db
+    environment:
+      - RAILS_ENV=development
+      - CASSANDRA_CONTACT_POINTS=cassandra-pets-db
+    command: >
+      bash -c "
+        rm -f tmp/pids/server.pid &&
+        if [ ! -f config/application.rb ]; then
+          rails new . --api --skip-active-record --skip-bundle &&
+          bundle install &&
+          echo 'Rails app created';
+        else
+          echo 'Rails app exists';
+        fi &&
+        rails server -b 0.0.0.0
+      "
+
+    networks:
+      - microservice-network
+
+  cassandra-pets-db:
+    image: cassandra:4.1
+    container_name: cassandra-pets-db
+    volumes:
+      - ./pet-microservice/cassandra-data:/var/lib/cassandra
+    networks:
+      - microservice-network
+
+  # API GATEWAY
+  api_gateway:
+    build:
+      context: ./api-gateway
+      dockerfile: ../Docker/Dockerfile.gateway
+    container_name: api-gateway
+    volumes:
+      - ./api-gateway:/app
+    working_dir: /app
+    environment:
+      - RAILS_ENV=development
+      - PERSONS_API_URL=http://persons:3000/persons
+      - PETS_API_URL=http://pets:3000/pets
+    depends_on:
+      - persons
+      - pets
+    ports:
+      - "4000:3000"
+    command: >
+      bash -c "
+        rm -f tmp/pids/server.pid &&
+        if [ ! -f config/application.rb ]; then
+          rails new . --api --skip-active-record --skip-bundle &&
+          bundle install &&
+          echo 'Rails app created';
+        else
+          echo 'Rails app exists';
+        fi &&
+        rails server -b 0.0.0.0
+      "
+
+    networks:
+      - microservice-network
+
+  # GATSBY FRONTEND
+  gatsby:
+    image: node:18
+    container_name: gatsby-frontend
+    working_dir: /app
+    volumes:
+      - ./gatsby/gatsby-front:/app
+    ports:
+      - "8080:8000" 
+    environment:
+      - GATSBY_API_URL=http://localhost:4000/graphql
+    depends_on:
+      - api_gateway
+    tty: true
+    stdin_open: true
+    command: >
+      sh -c "
+        npm install --legacy-peer-deps &&
+        npm run develop -- -H 0.0.0.0
+      "
+    networks:
+      - microservice-network
+
+networks:
+  microservice-network:
+    driver: bridge
