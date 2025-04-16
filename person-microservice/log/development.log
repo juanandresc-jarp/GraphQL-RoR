@@ -1,0 +1,54 @@
+Started GET "/persons" for 172.18.0.1 at 2025-04-15 16:17:35 +0000
+Processing by PersonsController#index as */*
+Completed 500 Internal Server Error in 151ms (GC: 0.2ms)
+
+
+  
+LoadError (cannot load such file -- cassandra):
+  
+app/models/person.rb:1:in `<main>'
+app/controllers/persons_controller.rb:3:in `index'
+Started GET "/persons" for 172.18.0.1 at 2025-04-15 16:21:12 +0000
+Processing by PersonsController#index as */*
+Completed 500 Internal Server Error in 2721ms (GC: 14.0ms)
+
+
+  
+RuntimeError (The `SortedSet` class has been extracted from the `set` library. You must use the `sorted_set` gem or other alternatives.):
+
+Causes:
+LoadError (cannot load such file -- sorted_set)
+  
+app/models/person.rb:1:in `<main>'
+app/controllers/persons_controller.rb:3:in `index'
+Started GET "/persons" for 172.18.0.1 at 2025-04-15 16:24:17 +0000
+Processing by PersonsController#index as */*
+Completed 200 OK in 3268ms (Views: 0.3ms | GC: 18.4ms)
+
+
+Started POST "/persons" for 172.18.0.1 at 2025-04-15 16:30:18 +0000
+Processing by PersonsController#create as */*
+  Parameters: {"person"=>{"dni"=>"12345678", "first_name"=>"Emma", "last_name"=>"Johnson", "email"=>"[FILTERED]", "phone"=>"5550001111"}}
+Completed 201 Created in 18ms (Views: 0.4ms | GC: 0.0ms)
+
+
+Started GET "/persons" for 172.18.0.1 at 2025-04-15 16:30:23 +0000
+Processing by PersonsController#index as */*
+Completed 200 OK in 4ms (Views: 0.2ms | GC: 0.0ms)
+
+
+Started GET "/persons" for 172.19.0.1 at 2025-04-16 16:04:30 +0000
+Processing by PersonsController#index as */*
+Completed 200 OK in 3516ms (Views: 0.6ms | GC: 18.4ms)
+
+
+Started GET "/persons" for 172.19.0.1 at 2025-04-16 16:26:07 +0000
+Processing by PersonsController#index as */*
+Completed 200 OK in 6ms (Views: 0.2ms | GC: 0.0ms)
+
+
+Started GET "/persons" for 172.19.0.1 at 2025-04-16 16:26:22 +0000
+Processing by PersonsController#index as */*
+Completed 200 OK in 5ms (Views: 0.1ms | GC: 0.7ms)
+
+

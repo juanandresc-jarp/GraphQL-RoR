@@ -1,0 +1,19 @@
+services:
+  gatsby:
+    image: node:18
+    container_name: gatsby-frontend
+    working_dir: /app
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    environment:
+      - GATSBY_API_URL=http://host.docker.internal:4000/graphql
+    tty: true
+    stdin_open: true
+    command: >
+        sh -c "
+          npm install --legacy-peer-deps &&
+          npm run develop -- -H 0.0.0.0
+        "
+
