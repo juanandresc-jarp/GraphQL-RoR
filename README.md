@@ -44,7 +44,7 @@ docker compose up ---build
 Esto creará y levantará los **6 contenedores** del sistema con comunicación entre ellos.
 
 > **Acceso general:**  
-> Frontend y API: `http://localhost:8080`
+> Frontend: `http://localhost:8080`
 ## 📘 Rutas
 
 Estas son las rutas expuestas en el frontend:
@@ -55,7 +55,7 @@ Estas son las rutas expuestas en el frontend:
 - `/persons/:dni/`
 - `/persons/create/`
 - `/persons/update/`
-- `persons/delete/`
+- `/persons/delete/`
 
 **Pets**
 
@@ -63,7 +63,7 @@ Estas son las rutas expuestas en el frontend:
 - `/pets/:dni/`
 - `/pets/create/`
 - `/pets/update/`
-- `pets/delete/`
+- `/pets/delete/`
 
 ---
 
