@@ -38,7 +38,7 @@ El sistema está compuesto por los siguientes componentes:
 docker-compose up --build
 
 # En Ubuntu
-docker compose up ---build
+docker compose up --build
 ```
 
 Esto creará y levantará los **6 contenedores** del sistema con comunicación entre ellos.
